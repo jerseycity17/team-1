@@ -1,6 +1,6 @@
 // Twilio Credentials
-var accountSid = 'ACc0d1c024b8d9262dc412778fdd8262e0';
-var authToken = 'de7b006fe0167961830695218fe4ff0d';
+var accountSid = 'ACc9350595679d4f12c3f12cdb04cd9a69';
+var authToken = '993524b332f86b5b76b6af0e7b2c9d66';
 
 //require the Twilio module and create a REST client
 var client = require('twilio')(accountSid, authToken);
@@ -15,7 +15,7 @@ function sendMessage(to, from, body){
     });
 }
 
-sendMessage("+13477612839", "+12015590989", "hello");
+sendMessage("+18627630988", "+16467913643", "mongo");
 
 module.exports = {
     sendMessage:sendMessage

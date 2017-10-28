@@ -8,6 +8,7 @@
     "fs": "0.0.1-security",
     "handlebars": "^4.0.11",
     "mongodb": "^2.2.33",
+    "ngrok": "^2.2.23",
     "twilio": "^3.9.1"
   },
   "devDependencies": {},
