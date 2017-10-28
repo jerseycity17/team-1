@@ -7,6 +7,8 @@ const app = express();
 app.set('view engine', 'hbs');
 
 
+app.use(express.static(__dirname));
+
 app.get('/signin', function(req, res){
 	res.render("signin");
 });
@@ -43,7 +45,8 @@ app.get('/messageThread', function(req, res){
 	res.render("messageThread");
 });
 
-messenger.sendMessage("+13477612839", "+12015590989", "from app.js");
+
+//messenger.sendMessage("+13477612839", "+12015590989", "from app.js");
 
 app.listen(3000);
 console.log("Started server on port 3000");

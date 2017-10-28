@@ -15,7 +15,7 @@ function sendMessage(to, from, body){
     });
 }
 
-sendMessage("+13477612839", "+12015590989", "hello");
+//sendMessage("+13477612839", "+12015590989", "hello");
 
 module.exports = {
     sendMessage:sendMessage
