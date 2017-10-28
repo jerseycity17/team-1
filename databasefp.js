@@ -1,8 +1,16 @@
 // JavaScript File
 var MongoClient = require('mongodb').MongoClient;
 //Create a database named "c4g":
+//var uri = "mongodb://localhost:27017/c4g";
 var url = "mongodb://localhost:27017/c4g";
 
+/*
+MongoClient.connect(uri, function(err, db) {
+    if (err) throw err;
+    console.log("Connected!!!");
+    db.close();
+});
+*/
 MongoClient.connect(url, function(err, db) {
     if (err) throw err;
     db.collection('CM').insertMany([
@@ -87,6 +95,10 @@ MongoClient.connect(url, function(err, db) {
         }
     ])
     
+    db.system.js.parseAlert([
+        
+    ])
+    
     db.system.js.average([
         {
          _id: "averageResponse",
@@ -96,6 +108,7 @@ MongoClient.connect(url, function(err, db) {
         }
     ])
     
-    console.log("Database created!");
-    db.close();
+    if (err) throw err;
+    console.log("Database entries created");
+    db.close();
 });
