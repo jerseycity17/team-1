@@ -17,6 +17,7 @@ const data = {
 			"housing-status": "homeless",
 			"employment-status": "unemployed",
 			"average-response-time": "3 weeks",
+			"message-history-length": 3,
 			"message-history": [
 								["hey David! how is the job search going?", "outgoing", "8/1/17"],
 								["It's going OK. Still haven't found anything that will help to afford a lease.", "incoming", "8/22/17"],
@@ -31,6 +32,7 @@ const data = {
 			"housing-status": "housed",
 			"employment-status": "unemployed",
 			"average-response-time": "1 week",
+			"message-history-length": 5,
 			"message-history": [
 								["hey Percy! how is the job search going? Let's do our best to make sure you do not get evicted", "outgoing", "10/5/17"],
 								["Thanks for reaching out. I actually haven't been looking for a job. The laws protect us for a short while.", "incoming", "10/12/17"],
@@ -47,6 +49,7 @@ const data = {
 			"housing-status": "housed",
 			"employment-status": "employed",
 			"average-response-time": "1 week",
+			"message-history-length": 2,
 			"message-history": [
 								["Hey Jackie! Just heard you got a job and a house. Looks like you've done my work for me", "outgoing", "10/5/17"],
 								["Thanks. I will be sure to let you know if my situation changes.", "incoming", "10/12/17"],
@@ -60,6 +63,7 @@ const data = {
 			"housing-status": "housed",
 			"employment-status": "employed",
 			"average-response-time": "1 day",
+			"message-history-length": 2,
 			"message-history": [
 								["Hey Morgan, not sure why you are on here. Obviously you are in good standing.", "outgoing", "10/24/17"],
 								["Yeah I know.", "incoming", "10/25/17"],
@@ -73,6 +77,7 @@ const data = {
 			"housing-status": "homeless",
 			"employment-status": "unemployed",
 			"average-response-time": "1 week",
+			"message-history-length": 6,
 			"message-history": [
 								["Hey", "outgoing", "9/4/17"],
 								["Hey", "incoming", "9/11/17"],
@@ -90,6 +95,7 @@ const data = {
 			"housing-status": "homeless",
 			"employment-status": "unemployed",
 			"average-response-time": "1 week",
+			"message-history-length": 6,
 			"message-history": [
 								["Hey", "outgoing", "9/4/17"],
 								["Hey", "incoming", "9/11/17"],
@@ -107,6 +113,7 @@ const data = {
 			"housing-status": "homeless",
 			"employment-status": "unemployed",
 			"average-response-time": "1 week",
+			"message-history-length": 6,
 			"message-history": [
 								["Hey", "outgoing", "9/4/17"],
 								["Hey", "incoming", "9/11/17"],
@@ -157,7 +164,7 @@ app.get("/editinfo", function(req, res){
 });
 
 app.get('/messaging', function(req, res){
-	res.render("messaging");
+	res.render("messaging", {body:data['families']});
 });
 
 app.get('/messageThread', function(req, res){
