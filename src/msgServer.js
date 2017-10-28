@@ -29,13 +29,16 @@ var http = require('http'),
 
 var app = express();
 
+var msg ='';
 app.post('/sms', function(req, res) {
     var twilio = require('twilio');
+    console.log(req);
     var twiml = new twilio.twiml.MessagingResponse();
-
-    twiml.message('What up Steven');
+    twiml.message('Thanks for contacting us, help wi');
+    //console.log(twiml.body());
     res.writeHead(200, {'Content-Type': 'text/xml'});
     res.end(twiml.toString());
+
 });
 
 http.createServer(app).listen(1337, function () {

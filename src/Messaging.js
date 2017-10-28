@@ -15,7 +15,7 @@ function sendMessage(to, from, body){
     });
 }
 
-sendMessage("+18627630988", "+16467913643", "mongo");
+sendMessage("+13477612839", "+16467913643", "mongo");
 
 module.exports = {
     sendMessage:sendMessage
