@@ -8,7 +8,7 @@
     <meta name="author" content="">
     <link rel="icon" href="../../../../favicon.ico">
 
-    <title>Edit Family Content</title>
+    <title>Edit The {{name}}s' Content</title>
 
     <!-- Bootstrap core CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
@@ -56,27 +56,23 @@
 
         <div class="starter-template">
             <h1>Edit Family Information</h1>
-            <p class="lead">Use this document as a way to quickly edit family information.<br> Add information: </p>
+            <p class="lead">Use this document as a way to quickly edit the {{name}}s' information.<br> Add information: </p>
         </div>
 
-        <div class="form-group">
-            <label for="comment">Rep:</label>
-            <textarea class="form-control" rows="5" id="comment"></textarea>
-        </div>
+        <form method="POST">
+        	<p> Representative: </p>
+            <input type="text" name="representative"/>
+
+            <p> Housing Status: </p>
+            <input type="text" name="housing-status"/>
         
-        <div class="form-group">
-            <label for="comment">Housing Status</label>
-            <textarea class="form-control" rows="5" id="comment"></textarea>
-        </div>
+            <p> Employment Status: </p>
+            <input type="text" name="employment-status"/>
         
-        <div class="form-group">
-            <label for="comment">Employment Status:</label>
-            <textarea class="form-control" rows="5" id="comment"></textarea>
-        </div>
-        
-        <div class="jumbotron">
-           <p><a class="btn btn-lg btn-success" href="#" role="button">Submit</a></p>
-        </div>
+        	<div class="jumbotron">
+        		<input type="submit" value="Update"/>
+        	</div>
+    	</form>
 
     </main>
     <!-- /.container -->

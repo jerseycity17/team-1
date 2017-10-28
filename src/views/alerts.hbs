@@ -71,136 +71,17 @@
                 </tr>
               </thead>
               <tbody>
+              	{{#each body}}
                 <tr>
-                  
-                  <td>Message</td>
+                  <td>{{this.[0]}}</td>
                     <td>
-                    <button type="button" >Family</button>
+                    <a href="/familyProfile?family={{this.[1]}}"> {{this.[1]}} </a></button>
                     </td>
                     <td>
-                    <button type="button" >X</button>
+                    <button type="button">X</button>
                     </td>
                 </tr>
-                <tr>
-                  
-                  <td>Message</td>
-                  <td>
-                    <button type="button" >Family</button>
-                    </td>
-                    <td>
-                    <button type="button" >X</button>
-                    </td>
-                  </tr>
-                <tr>
-                  
-                  <td>Message</td>
-                  <td>
-                    <button type="button" >Family</button>
-                    </td>
-                    <td>
-                    <button type="button" >X</button>
-                    </td>
-                </tr>
-                <tr>
-                  
-                  <td>Message</td>
-                  <td>
-                    <button type="button" >Family</button>
-                    </td>
-                    <td>
-                    <button type="button" >X</button>
-                    </td>
-                </tr>
-                <tr>
-                  
-                  <td>Message</td>
-                  <td>
-                    <button type="button" >Family</button>
-                    </td>
-                    <td>
-                    <button type="button" >X</button>
-                    </td>
-                </tr>
-                <tr>
-                  
-                  <td>Message</td>
-                  <td>
-                    <button type="button" >Family</button>
-                    </td>
-                    <td>
-                    <button type="button" >X</button>
-                    </td>
-                </tr>
-                <tr>
-                  
-                  <td>Message</td>
-                  <td>
-                    <button type="button" >Family</button>
-                    </td>
-                    <td>
-                    <button type="button" >X</button>
-                    </td>
-                </tr>
-                <tr>
-                  
-                  <td>Message</td>
-                  <td>
-                    <button type="button" >Family</button>
-                    </td>
-                    <td>
-                    <button type="button" >X</button>
-                    </td>
-                </tr>
-                <tr>
-                  
-                  <td>Message</td>
-                  <td>
-                    <button type="button" >Family</button>
-                    </td>
-                    <td>
-                    <button type="button" >X</button>
-                    </td>
-                </tr>
-                <tr>
-                  
-                  <td>Message</td>
-                  <td>
-                    <button type="button" >Family</button>
-                    </td>
-                    <td>
-                    <button type="button" >X</button>
-                    </td>
-                </tr>
-                <tr>
-                  
-                  <td>Message</td>
-                  <td>
-                    <button type="button" >Family</button>
-                    </td>
-                    <td>
-                    <button type="button" >X</button>
-                    </td>
-                </tr>
-                <tr>
-                  
-                  <td>Message</td>
-                  <td>
-                    <button type="button" >Family</button>
-                    </td>
-                    <td>
-                    <button type="button" >X</button>
-                    </td>
-                </tr>
-                <tr>
-                  
-                  <td>Message</td>
-                  <td>
-                    <button type="button" >Family</button>
-                    </td>
-                    <td>
-                    <button type="button" >X</button>
-                    </td>
-                </tr>
+                {{/each}}
               </tbody>
             </table>
           </div>

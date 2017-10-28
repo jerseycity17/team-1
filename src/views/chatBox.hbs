@@ -55,10 +55,10 @@
         <br>
             
             <div style="float:right; font-size: 19px;padding: 20px; ">
-            <button stlye ="float:right "type="button" >Profile</button>
+            <button stlye ="float:right "type="button" ><a href="/familyProfile?family={{name}}"> {{name}} </a>Profile</button>
             </div>
             <br>
-               <h1 style= "padding-left: 28px ">Family name</h1>  
+               <h1 style= "padding-left: 28px ">{{name}}</h1>  
             </div>
   
  
@@ -66,11 +66,13 @@
             <table class="table table-striped">
               <thead>
                 <tr>
-                  <th style="text-align: center; font-size: 22px">Phone #</th>
+                  <th style="text-align: center; font-size: 22px">{{body.phone}}</th>
                 </tr>
               </thead>
             </table>
             
+            {{#each messages}}
+            {{#if this.[1]}}
             <div style="
     background: #e6f2ff;
     min-width: 50px;
@@ -78,10 +80,11 @@
     padding-left: 20px;
     border-radius: 2px;
     box-shadow: 0px 2px 0px rgba(0, 0, 0, 0.07);">
-            <p>Hey</p>
-            <p style = "font-style: italic;font-size: 13px">Sent Oct 27</p>
+            <p>{{this.[0]}}</p>
+            <p style = "font-style: italic;font-size: 13px">Sent {{this.[2]}}</p>
             </div>
             <br>
+            {{else}}
             <div style="
     text-align: right;
     background: #e0e0eb;
@@ -90,42 +93,18 @@
     padding-right: 20px;
     border-radius: 2px;
     box-shadow: 0px 2px 0px rgba(0, 0, 0, 0.07);">
-            <p>Hi, how are you?</p>
-            <p style = "font-style: italic;font-size: 13px">Sent Oct 27</p>
+            <p>{{this.[0]}}</p>
+            <p style = "font-style: italic;font-size: 13px">Sent {{this.[2]}}</p>
             </div>
-            
-            <br>
-            <div style="
-    background: #e6f2ff;
-    min-width: 50px;
-    padding-top: 10px;
-    padding-left: 20px;
-    border-radius: 2px;
-    box-shadow: 0px 2px 0px rgba(0, 0, 0, 0.07);">
-            <p>I am having trouble finding a job</p>
-                <p style = "font-style: italic;font-size: 13px">Sent Oct 27</p>
-            </div>
-            
-            <br>
-            <div style="
-    background: #e0e0eb;
-    text-align: right;
-    min-width: 50px;
-    padding-top: 10px;
-    padding-right: 20px;
-    border-radius: 2px;
-    box-shadow: 0px 2px 0px rgba(0, 0, 0, 0.07);">
-            <p>Here's a link <a href="https://www.indeed.com/">www.indeed.com</a></p>
-            <p style = "font-style: italic;font-size: 13px">Sent Oct 27</p>
-            </div>
-          </div>
-        
+            {{/if}}
+            {{/each}}
+
      <div style="display: flex;
                         align-items: center;
                         justify-content: center;
                  padding-bottom: 20px">
-      <form ng-submit="sendMessage()">
-        <input type="text" ng-model="messageText" placeholder="Type your message here" size="60" />
+      <form method="POST">
+        <input type="text" name="messageText" placeholder="Type your message here" size="60" />
         <input type="submit" value="Send" />
     </form>
       </div>

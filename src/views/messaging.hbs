@@ -110,9 +110,9 @@
               <tbody>
                 {{#each body}}
                 <tr>
-                  <td>{{@key}}</td>
-                  <td>{{this.message-history.[this.message-history-length].[0]}}</td>
-                  <td>{{this.message-history.[this.message-history-length].[2]}}</td>
+                  <td><a class="nav-link" href="/messageThread?family={{@key}}"> {{@key}} </a></td>
+                  <td>{{this.message-history-reverse.[0].[0]}}</td>
+                  <td>{{this.message-history-reverse.[0].[2]}}</td>
                 </tr>
                 {{/each}}
               </tbody>
