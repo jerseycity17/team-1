@@ -1,9 +1,7 @@
 const fs = require('fs');
 const express = require("express");
-const db = require('./c4g.js');
-const messager = require('./Messaging.js');
-
-
+//const db = require('./c4g.js');
+const messenger = require('./Messaging.js');
 
 const app = express();
 app.set('view engine', 'hbs');
@@ -44,6 +42,8 @@ app.get('/messaging', function(req, res){
 app.get('/messageThread', function(req, res){
 	res.render("messageThread");
 });
+
+messenger.sendMessage("+13477612839", "+12015590989", "from app.js");
 
 app.listen(3000);
 console.log("Started server on port 3000");
