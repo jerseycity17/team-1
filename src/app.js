@@ -241,7 +241,7 @@ app.post('/messageThread', function(req, res){
 	console.log(fam);
 	console.log(data["families"][fam]);
 	const message = req.body.messageText;
-	messenger.sendMessage("+13477612839", "+12015590989", message);
+	messenger.sendMessage("+13477612839", "+16467913643", message);
 	data["families"][fam]["message-history"].push([""+message, true, "10/28/17"]);
 	data["families"][fam]["message-history-reverse"].unshift([""+message, true, "10/28/17"]);
 	res.render("chatBox", {body:data["families"][fam], name:fam, messages:data["families"][fam]["message-history"]});
