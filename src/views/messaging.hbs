@@ -102,105 +102,19 @@
             <table class="table table-striped">
               <thead>
                 <tr>
-                  <th>ID</th>
-                  <th>Head of Household</th>
+                  <th>Family Name</th>
+                  <th>Last Message Content</th>
                   <th>Date Last Contacted</th>
                 </tr>
               </thead>
               <tbody>
+                {{#each body}}
                 <tr>
-                  <td>1,001</td>
-                  <td>Lopes</td>
-                    <td>09-12-2017</td>
+                  <td>{{@key}}</td>
+                  <td>{{this.message-history.[this.message-history-length].[0]}}</td>
+                  <td>{{this.message-history.[this.message-history-length].[2]}}</td>
                 </tr>
-                <tr>
-                  <td>1,002</td>
-                  <td>amet</td>
-                  <td>04-13-2017</td>
-                </tr>
-                <tr>
-                  <td>1,003</td>
-                  <td>Integer</td>
-                  <td>01-02-2017</td>
-                </tr>
-                <tr>
-                  <td>1,003</td>
-                  <td>libero</td>
-                  <td>03-14-2017</td>
-
-                </tr>
-                <tr>
-                  <td>1,004</td>
-                  <td>dapibus</td>
-                  <td>04-07-2017</td>
-
-                </tr>
-                <tr>
-                  <td>1,005</td>
-                  <td>Nulla</td>
-                  <td>06-12-2017</td>
-
-                </tr>
-                <tr>
-                  <td>1,006</td>
-                  <td>nibh</td>
-                  <td>10-12-2017</td>
- 
-                </tr>
-                <tr>
-                  <td>1,007</td>
-                  <td>sagittis</td>
-                  <td>11-09-2016</td>
-
-                </tr>
-                <tr>
-                  <td>1,008</td>
-                  <td>Fusce</td>
-                  <td>10-05-2016</td>
-
-                </tr>
-                <tr>
-                  <td>1,009</td>
-                  <td>augue</td>
-                  <td>semper</td>
-
-                </tr>
-                <tr>
-                  <td>1,010</td>
-                  <td>massa</td>
-                  <td>Vestibulum</td>
-
-                </tr>
-                <tr>
-                  <td>1,011</td>
-                  <td>eget</td>
-                  <td>10-31-2015</td>
-
-                </tr>
-                <tr>
-                  <td>1,012</td>
-                  <td>taciti</td>
-                  <td>06-06-2016</td>
-
-                </tr>
-                <tr>
-                  <td>1,013</td>
-                  <td>torquent</td>
-                  <td>01-11-2017</td>
-
-                </tr>
-                <tr>
-                  <td>1,014</td>
-                  <td>per</td>
-                  <td>02-03-2017</td>
-
-                </tr>
-                <tr>
-                  <td>1,015</td>
-                  <td>sodales</td>
-                  <td>11-04-2015</td>
-
-                </tr>
+                {{/each}}
               </tbody>
             </table>
           </div>
