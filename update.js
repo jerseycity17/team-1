@@ -1,0 +1,15 @@
+// JavaScript File
+var MongoClient = require('mongodb').MongoClient;
+//Create a database named "c4g":
+var url = "mongodb://localhost:27017/c4g";
+
+MongoClient.connect(url, function(err, db) {
+   if (err) throw err;
+    var myquery = { address: "Valley 345" };
+  var newvalues = { name: "Mickey", address: "Canyon 123" };
+  db.collection("customers").updateOne(myquery, newvalues, function(err, res) {
+    if (err) throw err;
+    console.log("1 document updated");
+    db.close();
+  });
+});
